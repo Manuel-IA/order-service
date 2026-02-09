@@ -15,6 +15,14 @@ RSpec.describe "Orders API", type: :request do
       expect(body.length).to eq(1)
       expect(body.first["customer_id"]).to eq(1)
     end
+
+    it "returns 400 when customer_id is missing" do
+      get "/api/v1/orders"
+
+      expect(response).to have_http_status(:bad_request)
+      body = JSON.parse(response.body)
+      expect(body["error"]).to be_present
+    end
   end
 
   describe "POST /api/v1/orders" do
