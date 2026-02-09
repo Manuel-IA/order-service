@@ -25,7 +25,7 @@ RSpec.describe "Orders API", type: :request do
           product_name: params[:product_name],
           quantity: params[:quantity],
           price: params[:price],
-          status: params[:status] || "created"
+          status: params[:status] || "paid"
         )
       end
 
@@ -35,7 +35,7 @@ RSpec.describe "Orders API", type: :request do
           product_name: "Mouse",
           quantity: 1,
           price: 50000,
-          status: "created"
+          status: "paid"
         }
       }
 

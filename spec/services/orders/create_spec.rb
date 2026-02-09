@@ -15,7 +15,7 @@ RSpec.describe Orders::Create do
     end
 
     order = described_class.call(
-      { customer_id: 1, product_name: "Phone", quantity: 1, price: 1000, status: "created" },
+      { customer_id: 1, product_name: "Phone", quantity: 1, price: 1000 },
       customer_client: fake_customer_client,
       publisher: fake_publisher
     )

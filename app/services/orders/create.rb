@@ -22,7 +22,7 @@ module Orders
           product_name: @params[:product_name],
           quantity: @params[:quantity],
           price: @params[:price],
-          status: @params[:status].presence || "created",
+          status: @params[:status].presence || "paid",
           customer_name: customer[:customer_name],
           address: customer[:address]
         )
