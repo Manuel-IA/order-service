@@ -5,10 +5,6 @@ require "faraday/retry"
 require "json"
 
 module CustomerService
-  class Unavailable < StandardError; end
-  class NotFound < StandardError; end
-  class BadResponse < StandardError; end
-
   class Client
     DEFAULT_TIMEOUT = 2
 

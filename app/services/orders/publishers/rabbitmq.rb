@@ -5,11 +5,9 @@ require "json"
 
 module Orders
   module Publishers
-    class PublishFailed < StandardError; end
-
     class Rabbitmq
       def initialize(
-        rabbitmq_url: ENV.fetch("RABBITMQ_URL"),
+        rabbitmq_url: ENV.fetch("RABBITMQ_URL", "amqp://guest:guest@localhost:5672"),
         exchange_name: ENV.fetch("ORDERS_EXCHANGE", "orders"),
         routing_key: ENV.fetch("ORDER_CREATED_ROUTING_KEY", "order.created")
       )
