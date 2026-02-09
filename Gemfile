@@ -51,3 +51,4 @@ gem "faker", "~> 3.6", groups: [:development, :test]
 
 gem "faraday", "~> 2.14"
 gem "bunny", "~> 2.24"
+gem 'faraday-retry', "~> 2.4"
