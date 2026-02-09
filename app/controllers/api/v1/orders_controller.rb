@@ -22,7 +22,6 @@ module Api
           }, status: :unprocessable_entity
         end
 
-        # TODO : Create order using service object to handle business logic and validations
         order = Orders::Create.call(attrs)
         render json: serialize(order), status: :created
       end
