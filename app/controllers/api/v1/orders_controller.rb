@@ -41,7 +41,7 @@ module Api
           price: order.price&.to_s,
           status: order.status,
           customer_name: order.try(:customer_name),
-          address: order.try(:address),
+          customer_address: order.try(:address),
           created_at: order.created_at
         }
       end
